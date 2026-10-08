@@ -1,0 +1,1299 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Sucursal Virtual Negocios | Amoblación</title>
+
+        <meta name="description"
+            content="Sucursal Virtual Negocios - Soluciones modernas de amoblación para hogares, oficinas y negocios.">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+            rel="stylesheet">
+
+        <style>
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: 'Inter', sans-serif;
+                background: #f5f6f8;
+                color: #171717;
+            }
+
+            /* =========================
+            HEADER
+            ========================= */
+
+            header {
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+                background: rgba(255,255,255,0.96);
+                backdrop-filter: blur(12px);
+                border-bottom: 1px solid #e8e8e8;
+            }
+
+            .navbar {
+                max-width: 1200px;
+                margin: auto;
+                min-height: 75px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 25px;
+            }
+
+            .logo {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                font-weight: 800;
+                font-size: 20px;
+                color: #111;
+                text-decoration: none;
+            }
+
+            .logo-icon {
+                width: 43px;
+                height: 43px;
+                border-radius: 12px;
+                background: #111;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 20px;
+            }
+
+            nav {
+                display: flex;
+                gap: 25px;
+                align-items: center;
+            }
+
+            nav a {
+                text-decoration: none;
+                color: #444;
+                font-size: 14px;
+                font-weight: 600;
+                transition: 0.3s;
+            }
+
+            nav a:hover {
+                color: #000;
+            }
+
+            .btn-access {
+                background: #111;
+                color: white !important;
+                padding: 12px 19px;
+                border-radius: 10px;
+            }
+
+            .btn-access:hover {
+                background: #333;
+                transform: translateY(-1px);
+            }
+
+            /* =========================
+            HERO
+            ========================= */
+
+            .hero {
+                min-height: 650px;
+                display: flex;
+                align-items: center;
+                background:
+                    linear-gradient(
+                        90deg,
+                        rgba(0,0,0,.80),
+                        rgba(0,0,0,.38),
+                        rgba(0,0,0,.10)
+                    ),
+                    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1800&q=85")
+                    center/cover;
+                color: white;
+            }
+
+            .hero-content {
+                width: 1200px;
+                max-width: 100%;
+                margin: auto;
+                padding: 60px 25px;
+            }
+
+            .hero small {
+                display: inline-block;
+                background: rgba(255,255,255,.14);
+                border: 1px solid rgba(255,255,255,.3);
+                padding: 8px 14px;
+                border-radius: 50px;
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+
+            .hero h1 {
+                max-width: 720px;
+                font-size: clamp(42px, 6vw, 76px);
+                line-height: 1.02;
+                margin-bottom: 25px;
+                letter-spacing: -3px;
+            }
+
+            .hero p {
+                max-width: 650px;
+                color: #eee;
+                font-size: 18px;
+                line-height: 1.7;
+                margin-bottom: 35px;
+            }
+
+            .hero-buttons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 13px;
+            }
+
+            .hero-btn {
+                display: inline-block;
+                padding: 15px 23px;
+                border-radius: 11px;
+                text-decoration: none;
+                font-weight: 700;
+                transition: .3s;
+            }
+
+            .primary {
+                background: white;
+                color: #111;
+            }
+
+            .secondary {
+                background: rgba(255,255,255,.12);
+                color: white;
+                border: 1px solid rgba(255,255,255,.4);
+            }
+
+            .hero-btn:hover {
+                transform: translateY(-3px);
+            }
+
+            /* =========================
+            SECCIONES
+            ========================= */
+
+            section {
+                padding: 90px 25px;
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: auto;
+            }
+
+            .section-title {
+                max-width: 700px;
+                margin-bottom: 45px;
+            }
+
+            .section-title span {
+                font-size: 13px;
+                font-weight: 800;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: #777;
+            }
+
+            .section-title h2 {
+                font-size: clamp(32px, 5vw, 48px);
+                margin: 10px 0 15px;
+                letter-spacing: -1.5px;
+            }
+
+            .section-title p {
+                color: #666;
+                line-height: 1.7;
+            }
+
+            /* =========================
+            HISTORIA
+            ========================= */
+
+            .history {
+                background: white;
+            }
+
+            .history-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 60px;
+                align-items: center;
+            }
+
+            .history-image {
+                height: 470px;
+                border-radius: 25px;
+                overflow: hidden;
+            }
+
+            .history-image img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .6s;
+            }
+
+            .history-image:hover img {
+                transform: scale(1.04);
+            }
+
+            .history-text p {
+                color: #666;
+                line-height: 1.9;
+                margin-bottom: 20px;
+            }
+
+            .history-box {
+                margin-top: 25px;
+                padding: 20px;
+                background: #f5f5f5;
+                border-radius: 15px;
+                border-left: 4px solid #111;
+            }
+
+            /* =========================
+            SERVICIOS
+            ========================= */
+
+            .services {
+                background: #f5f6f8;
+            }
+
+            .cards {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 22px;
+            }
+
+            .card {
+                background: white;
+                padding: 30px;
+                border-radius: 20px;
+                border: 1px solid #e8e8e8;
+                transition: .3s;
+            }
+
+            .card:hover {
+                transform: translateY(-7px);
+                box-shadow: 0 20px 45px rgba(0,0,0,.08);
+            }
+
+            .card-icon {
+                width: 55px;
+                height: 55px;
+                border-radius: 15px;
+                background: #111;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 23px;
+                margin-bottom: 20px;
+            }
+
+            .card h3 {
+                margin-bottom: 12px;
+            }
+
+            .card p {
+                color: #666;
+                line-height: 1.7;
+            }
+
+            /* =========================
+            GALERÍA
+            ========================= */
+
+            .gallery {
+                background: white;
+            }
+
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 15px;
+            }
+
+            .gallery-item {
+                height: 280px;
+                overflow: hidden;
+                border-radius: 18px;
+            }
+
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: .5s;
+            }
+
+            .gallery-item:hover img {
+                transform: scale(1.08);
+            }
+
+            /* =========================
+            TESTIMONIOS
+            ========================= */
+
+            .testimonials {
+                background: #111;
+                color: white;
+            }
+
+            .testimonials .section-title p,
+            .testimonials .section-title span {
+                color: #aaa;
+            }
+
+            .testimonial-grid {
+                display: grid;
+                grid-template-columns: repeat(3,1fr);
+                gap: 20px;
+            }
+
+            .testimonial {
+                background: #1c1c1c;
+                border: 1px solid #292929;
+                padding: 30px;
+                border-radius: 20px;
+            }
+
+            .stars {
+                margin-bottom: 18px;
+                font-size: 18px;
+            }
+
+            .testimonial p {
+                color: #ccc;
+                line-height: 1.7;
+                margin-bottom: 20px;
+            }
+
+            .client {
+                font-weight: 700;
+            }
+
+            /* =========================
+            BUZÓN
+            ========================= */
+
+            .contact {
+                background: #f5f6f8;
+            }
+
+            .contact-grid {
+                display: grid;
+                grid-template-columns: .8fr 1.2fr;
+                gap: 50px;
+                align-items: start;
+            }
+
+            .contact-info h2 {
+                font-size: 42px;
+                margin-bottom: 20px;
+            }
+
+            .contact-info p {
+                color: #666;
+                line-height: 1.8;
+                margin-bottom: 25px;
+            }
+
+            .contact-list {
+                list-style: none;
+            }
+
+            .contact-list li {
+                padding: 14px 0;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .form {
+                background: white;
+                padding: 35px;
+                border-radius: 22px;
+                box-shadow: 0 15px 40px rgba(0,0,0,.06);
+            }
+
+            .form-group {
+                margin-bottom: 18px;
+            }
+
+            .form label {
+                display: block;
+                font-size: 14px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+
+            .form input,
+            .form textarea,
+            .form select {
+                width: 100%;
+                border: 1px solid #ddd;
+                border-radius: 10px;
+                padding: 14px;
+                font-family: inherit;
+                outline: none;
+                transition: .3s;
+            }
+
+            .form input:focus,
+            .form textarea:focus,
+            .form select:focus {
+                border-color: #111;
+            }
+
+            .form textarea {
+                min-height: 140px;
+                resize: vertical;
+            }
+
+            .submit-btn {
+                width: 100%;
+                border: none;
+                padding: 15px;
+                border-radius: 10px;
+                background: #111;
+                color: white;
+                font-weight: 700;
+                cursor: pointer;
+                font-size: 15px;
+            }
+
+            .submit-btn:hover {
+                background: #333;
+            }
+
+            #mensaje {
+                margin-top: 15px;
+                text-align: center;
+                font-weight: 600;
+                display: none;
+            }
+
+            /* =========================
+            ACCESO
+            ========================= */
+
+            .access {
+                background: white;
+                text-align: center;
+            }
+
+            .access-box {
+                max-width: 850px;
+                margin: auto;
+                padding: 60px 30px;
+                border-radius: 25px;
+                background:
+                    linear-gradient(
+                        135deg,
+                        #111,
+                        #333
+                    );
+                color: white;
+            }
+
+            .access-box h2 {
+                font-size: 40px;
+                margin-bottom: 15px;
+            }
+
+            .access-box p {
+                color: #ccc;
+                line-height: 1.7;
+                margin-bottom: 30px;
+            }
+
+            .access-button {
+                display: inline-block;
+                background: white;
+                color: #111;
+                text-decoration: none;
+                font-weight: 800;
+                padding: 16px 28px;
+                border-radius: 11px;
+                transition: .3s;
+            }
+
+            .access-button:hover {
+                transform: translateY(-3px);
+            }
+
+            /* =========================
+            FOOTER
+            ========================= */
+
+            footer {
+                background: #080808;
+                color: white;
+                padding: 45px 25px;
+            }
+
+            .footer-content {
+                max-width: 1200px;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+                flex-wrap: wrap;
+            }
+
+            footer p {
+                color: #888;
+                font-size: 14px;
+            }
+
+            .footer-links {
+                display: flex;
+                gap: 20px;
+            }
+
+            .footer-links a {
+                color: #aaa;
+                text-decoration: none;
+                font-size: 14px;
+            }
+
+            .footer-links a:hover {
+                color: white;
+            }
+
+            /* =========================
+            RESPONSIVE
+            ========================= */
+
+            @media(max-width: 850px) {
+
+                nav {
+                    display: none;
+                }
+
+                .history-grid,
+                .contact-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .cards,
+                .testimonial-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .gallery-grid {
+                    grid-template-columns: 1fr 1fr;
+                }
+
+                .hero {
+                    min-height: 600px;
+                }
+
+                .history-image {
+                    height: 350px;
+                }
+            }
+
+            @media(max-width: 550px) {
+
+                section {
+                    padding: 65px 18px;
+                }
+
+                .navbar {
+                    padding: 0 18px;
+                }
+
+                .hero-content {
+                    padding: 50px 18px;
+                }
+
+                .hero h1 {
+                    letter-spacing: -1.5px;
+                }
+
+                .gallery-grid {
+                    grid-template-columns: 1fr;
+                }
+
+                .gallery-item {
+                    height: 260px;
+                }
+
+                .form {
+                    padding: 23px;
+                }
+
+                .access-box h2 {
+                    font-size: 30px;
+                }
+            }
+
+        </style>
+    </head>
+
+    <body>
+
+    <!-- =========================
+        NAVBAR
+    ========================= -->
+
+    <header>
+
+        <div class="navbar">
+
+            <a href="#" class="logo">
+                <div class="logo-icon">SV</div>
+                Sucursal Virtual Negocios
+            </a>
+
+            <nav>
+                <a href="#historia">Historia</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#galeria">Galería</a>
+                <a href="#buzon">Buzón</a>
+
+                <a href="#acceso" class="btn-access">
+                    Sucursal Virtual Negocios
+                </a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+        HERO
+    ========================= -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <small>AMOBLACIÓN • DISEÑO • CONFORT</small>
+
+            <h1>
+                Espacios que cuentan tu historia.
+            </h1>
+
+            <p>
+                En <strong>Sucursal Virtual Negocios</strong> transformamos
+                espacios en ambientes modernos, funcionales y pensados
+                para las necesidades de cada cliente.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#acceso" class="hero-btn primary">
+                    Sucursal Virtual Negocios
+                </a>
+
+                <a href="#galeria" class="hero-btn secondary">
+                    Ver nuestros espacios
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        HISTORIA
+    ========================= -->
+
+    <section class="history" id="historia">
+
+        <div class="container">
+
+            <div class="history-grid">
+
+                <div class="history-image">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=1000&q=85"
+                        alt="Sala moderna amoblada"
+                    >
+
+                </div>
+
+                <div class="history-text">
+
+                    <div class="section-title">
+
+                        <span>Nuestra historia</span>
+
+                        <h2>
+                            Diseñamos espacios para vivir y trabajar mejor.
+                        </h2>
+
+                    </div>
+
+                    <p>
+                        <strong>Sucursal Virtual Negocios</strong> nació con
+                        la visión de ofrecer soluciones de amoblación
+                        modernas, funcionales y accesibles para hogares,
+                        oficinas y negocios.
+                    </p>
+
+                    <p>
+                        Nuestro propósito es ayudar a cada cliente a
+                        encontrar una solución que combine diseño,
+                        comodidad y personalidad.
+                    </p>
+
+                    <p>
+                        Cada espacio es diferente. Por eso trabajamos para
+                        convertir las ideas de nuestros clientes en
+                        ambientes que realmente puedan disfrutar.
+                    </p>
+
+                    <div class="history-box">
+
+                        <strong>
+                            “Tu espacio merece sentirse como tuyo.”
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        SERVICIOS
+    ========================= -->
+
+    <section class="services" id="servicios">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Lo que hacemos</span>
+
+                <h2>
+                    Soluciones para cada espacio
+                </h2>
+
+                <p>
+                    Diseñamos propuestas pensadas para hogares,
+                    oficinas y diferentes tipos de negocios.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <div class="card-icon">🛋️</div>
+
+                    <h3>Amoblación residencial</h3>
+
+                    <p>
+                        Soluciones para salas, habitaciones,
+                        comedores y diferentes espacios del hogar.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">🏢</div>
+
+                    <h3>Oficinas modernas</h3>
+
+                    <p>
+                        Creamos ambientes de trabajo cómodos,
+                        organizados y profesionales.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <div class="card-icon">✨</div>
+
+                    <h3>Diseño personalizado</h3>
+
+                    <p>
+                        Adaptamos nuestras propuestas al estilo,
+                        espacio y necesidades de cada cliente.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        GALERÍA
+    ========================= -->
+
+    <section class="gallery" id="galeria">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Inspiración</span>
+
+                <h2>
+                    Algunos espacios
+                </h2>
+
+                <p>
+                    Una selección de ambientes modernos para
+                    inspirar tu próximo proyecto.
+                </p>
+
+            </div>
+
+
+            <div class="gallery-grid">
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1000&q=85"
+                        alt="Interior moderno"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1000&q=85"
+                        alt="Sala elegante"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=85"
+                        alt="Comedor moderno"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1598928506311-c55ded91a20c?auto=format&fit=crop&w=1000&q=85"
+                        alt="Habitación moderna"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1000&q=85"
+                        alt="Oficina moderna"
+                    >
+
+                </div>
+
+
+                <div class="gallery-item">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1000&q=85"
+                        alt="Espacio interior"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        TESTIMONIOS
+    ========================= -->
+
+    <section class="testimonials">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <span>Clientes</span>
+
+                <h2>
+                    Lo que dicen nuestros clientes
+                </h2>
+
+                <p>
+                    Experiencias que reflejan nuestro compromiso.
+                </p>
+
+            </div>
+
+
+            <div class="testimonial-grid">
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        “El resultado superó nuestras expectativas.
+                        El espacio quedó moderno y muy cómodo.”
+                    </p>
+
+                    <div class="client">
+                        Cliente particular
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        “Excelente atención y una propuesta muy
+                        profesional. Volveríamos a trabajar con ellos.”
+                    </p>
+
+                    <div class="client">
+                        Cliente empresarial
+                    </div>
+
+                </div>
+
+
+                <div class="testimonial">
+
+                    <div class="stars">
+                        ★★★★★
+                    </div>
+
+                    <p>
+                        “Nos ayudaron a darle una nueva imagen
+                        completamente diferente a nuestro espacio.”
+                    </p>
+
+                    <div class="client">
+                        Cliente verificado
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        BUZÓN
+    ========================= -->
+
+    <section class="contact" id="buzon">
+
+        <div class="container">
+
+            <div class="contact-grid">
+
+                <div class="contact-info">
+
+                    <h2>
+                        Buzón de peticiones
+                    </h2>
+
+                    <p>
+                        ¿Tienes una pregunta, propuesta, solicitud o
+                        recomendación? Déjanos tu mensaje y nuestro
+                        equipo podrá revisarlo.
+                    </p>
+
+                    <ul class="contact-list">
+
+                        <li>
+                            📩 Peticiones
+                        </li>
+
+                        <li>
+                            💡 Sugerencias
+                        </li>
+
+                        <li>
+                            🛋️ Solicitudes de amoblación
+                        </li>
+
+                        <li>
+                            ⭐ Recomendaciones
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <form class="form" id="peticionForm">
+
+                    <div class="form-group">
+
+                        <label>
+                            Nombre completo
+                        </label>
+
+                        <input
+                            type="text"
+                            id="nombre"
+                            placeholder="Escribe tu nombre"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Correo electrónico
+                        </label>
+
+                        <input
+                            type="email"
+                            id="correo"
+                            placeholder="correo@ejemplo.com"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Tipo de solicitud
+                        </label>
+
+                        <select id="tipo">
+
+                            <option value="Petición">
+                                Petición
+                            </option>
+
+                            <option value="Cotización">
+                                Solicitud de cotización
+                            </option>
+
+                            <option value="Sugerencia">
+                                Sugerencia
+                            </option>
+
+                            <option value="Información">
+                                Solicitar información
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label>
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            id="mensajeTexto"
+                            placeholder="Escribe aquí tu petición..."
+                            required
+                        ></textarea>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="submit-btn"
+                    >
+                        Enviar petición
+                    </button>
+
+
+                    <div id="mensaje">
+                        ¡Gracias! Tu petición ha sido registrada.
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        ACCESO
+    ========================= -->
+
+    <section class="access" id="acceso">
+
+        <div class="container">
+
+            <div class="access-box">
+
+                <h2>
+                    Sucursal Virtual Negocios
+                </h2>
+
+                <p>
+                    Accede a nuestro espacio virtual para conocer
+                    nuestras soluciones y gestionar tus solicitudes
+                    de manera sencilla.
+                </p>
+
+                <!-- Cambia "acceso.html" por la página real de acceso -->
+
+                <a
+                    href="acceso.html"
+                    class="access-button"
+                >
+                    Sucursal Virtual Negocios
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+        FOOTER
+    ========================= -->
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+
+                <strong>
+                    Sucursal Virtual Negocios
+                </strong>
+
+                <p>
+                    Amoblación • Diseño • Confort
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <a href="#historia">
+                    Historia
+                </a>
+
+                <a href="#servicios">
+                    Servicios
+                </a>
+
+                <a href="#galeria">
+                    Galería
+                </a>
+
+                <a href="#buzon">
+                    Contacto
+                </a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================
+        JAVASCRIPT
+    ========================= -->
+
+    <script>
+
+        document
+            .getElementById("peticionForm")
+            .addEventListener("submit", function(event) {
+
+                event.preventDefault();
+
+                const mensaje = document.getElementById("mensaje");
+
+                mensaje.style.display = "block";
+
+                this.reset();
+
+                setTimeout(function() {
+
+                    mensaje.style.display = "none";
+
+                }, 5000);
+
+            });
+
+    </script>
+
+    </body>
+    </html>
+    ```
